@@ -76,6 +76,14 @@ form label {
 
 .login-form{
   background-color: #D9EAD3;
+  border-bottom: 10px solid #A6A6A6;
+  border-radius: 10px;
+  border-right: 10px solid #A6A6A6;
+  padding-top: 5px;
+}
+
+.login-button{
+  background-color: #A6A6A6;
 }
 
 .login-header{
@@ -85,6 +93,32 @@ form label {
   padding-right: 5px;
   padding-left: 8px;
   padding-bottom: 3px;
+  margin-bottom: 10px;
+  border-bottom: 10px solid #A6A6A6;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.signup-form{
+  padding-top: 5px;
+  background-color: #D9EAD3;
+  border-bottom: 10px solid #A6A6A6;
+  border-radius: 10px;
+  border-right: 10px solid #A6A6A6;
+}
+
+.sign-up-button{
+  background-color: #A6A6A6;
+}
+
+.sign-up-header{  
+  font-size: 2em;
+  background-color: #D9EAD3;
+  border-right: 10px solid #A6A6A6;
+  padding-right: 5px;
+  padding-left: 8px;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
   border-bottom: 10px solid #A6A6A6;
   border-radius: 10px;
   width: fit-content;
