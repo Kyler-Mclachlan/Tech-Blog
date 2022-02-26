@@ -9,20 +9,21 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <header>
-      <h1>
-        <a href="/">Tech Blog</a>
-      </h1>
-<nav>
+  <nav class="title-header">
+  <a class="btn-no-style" href="/">Homepage</a>
   {{#if loggedIn}}
-  <a href="/dashboard">dashboard</a>
-  <button id="logout" class="btn-no-style">logout</button>
+  <a class="btn-no-style" href="/dashboard">Dashboard</a>
+  <button id="logout" class="btn-no-style">Logout</button>
   {{else}}
-  <a href="/login">login</a>
+  <a href="/login">Login</a>
   {{/if}}
 </nav>
+    <header class="title-header">
+      <h1 class="title-of-website">
+        Tech Blog</a>
+      </h1>
     </header>
+    <div class="wrapper">
     <main>
       {{{ body }}}
     </main>
