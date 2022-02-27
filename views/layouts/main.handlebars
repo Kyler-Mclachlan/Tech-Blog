@@ -36,5 +36,36 @@
   <script src="/javascript/logout.js"></script>
   {{/if}}
 </body>
-
+{{#if loggedIn}}
+<script>
+let inactivityTime = function () {
+  let time;
+  window.onload = resetTimer;
+  document.onload = resetTimer;
+  document.onmousemove = resetTimer;
+  document.onmousedown = resetTimer; // touchscreen presses
+  document.ontouchstart = resetTimer;
+  document.onclick = resetTimer; // touchpad clicks
+  document.onkeypress = resetTimer;
+  document.addEventListener('scroll', resetTimer, true); // improved; see comments
+  async function logout() {
+    alert("You have been logged out for inactivity!")
+    const response = await fetch('/api/users/logout', {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' }
+    });
+    if (response.ok) {
+      document.location.replace('/');
+    } else {
+      alert(response.statusText);
+    }
+  }
+  function resetTimer() {
+    clearTimeout(time);
+    time = setTimeout(logout, 30000)
+  }
+};
+inactivityTime();
+</script>
+{{/if}}
 </html>
